@@ -1,4 +1,4 @@
-import { Container, Icon, Image } from "./AppStyled"
+import { Container, Icon, Image, ContainerImg } from "./AppStyled"
 import GlobalStyle from "./globalStyles"
 
 function App() {
@@ -7,8 +7,10 @@ function App() {
     <>
       <GlobalStyle />
       <Container>
-        <h1>Hello, Human! 🐕</h1>
-        <Image src="https://place.dog/300/200"/>
+        <h1>Reveal the dog 🐕</h1>
+        <ContainerImg>
+          <Image src="https://place.dog/300/200" />
+        </ContainerImg>
         <button onClick={() => document.location.reload()}><Icon src="./src/img/cachorro.png" /></button>
       </Container>
     </>
