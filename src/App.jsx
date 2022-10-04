@@ -11,7 +11,7 @@ function App() {
         <ContainerImg>
           <Image src="https://place.dog/300/200" />
         </ContainerImg>
-        <button onClick={() => document.location.reload()}><Icon src="./src/img/cachorro.png" alt="A dog"/></button>
+        <button onClick={() => document.location.reload()}><Icon src="https://github.com/eron300/Look-a-dog/blob/main/src/img/cachorro.png" alt="A dog"/></button>
       </Container>
     </>
   )
