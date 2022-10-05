@@ -2,20 +2,29 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
   border: 1px solid black;
-  width: 40em;
+  flex-direction: column;
   padding: 2em;
-  -webkit-box-shadow: 10px 10px 8px 0px rgba(0,0,0,0.56);
-  -moz-box-shadow: 10px 10px 8px 0px rgba(0,0,0,0.56);
+  width: 40em;
+
   box-shadow: 10px 10px 8px 0px rgba(0,0,0,0.56);
+  -moz-box-shadow: 10px 10px 8px 0px rgba(0,0,0,0.56);
+  -webkit-box-shadow: 10px 10px 8px 0px rgba(0,0,0,0.56);
+`
+export const ContainerButton = styled.div`
+  display: flex;
+  justify-content: space-around;
+  border: 1.6px solid black;
+  width: 100%;
+  padding: 1.2em;
+  max-width: 41.5em;
 `
 
 export const ContainerImg = styled.div`
   border: 2px solid #162DB8;
-  margin-bottom: 1em;
   border-radius: 50%;
+  margin-bottom: 1em;
 
   :hover{
     border: none;
@@ -24,18 +33,18 @@ export const ContainerImg = styled.div`
 
 export const Image = styled.img`
   border-radius: 50%;
-  opacity: 0;
   cursor: pointer;
-  width: 100%;
   height: 100%;
+  opacity: 0;
+  width: 100%;
 
   :hover{
-    opacity: 1;
     border: 2px solid #162DB8;
+    opacity: 1;
   }
 `
 
 export const Icon = styled.img`
-  max-width: 30px;
   cursor: pointer;
+  max-width: 30px;
 `

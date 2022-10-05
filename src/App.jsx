@@ -1,18 +1,26 @@
-import { Container, Icon, Image, ContainerImg } from "./AppStyled"
+
 import GlobalStyle from "./globalStyles"
+import { CatPage } from "./pages/CatPage"
+import { DogPage } from "./pages/DogPage"
+import {useState} from "react"
+import { ContainerButton } from "./AppStyled"
 
 function App() {
+  const [page, setPage] = useState(false);
 
   return (
     <>
       <GlobalStyle />
-      <Container>
-        <h1>Reveal the dog 🐕</h1>
-        <ContainerImg>
-          <Image src="https://place.dog/300/200" />
-        </ContainerImg>
-        <button onClick={() => document.location.reload()}><Icon src="https://github.com/eron300/Look-a-dog/blob/main/src/img/cachorro.png?raw=true" alt="A dog"/></button>
-      </Container>
+      <ContainerButton>
+        <button type="button" onClick={() => setPage(false)}>Dog</button>      
+        <button type="button" onClick={() => setPage(true)}>Cat</button>
+      </ContainerButton>      
+      {page ? 
+        <CatPage /> 
+        : 
+        <DogPage />
+      }
+      
     </>
   )
 }
